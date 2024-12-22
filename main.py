@@ -1,9 +1,9 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-import os
+from langchain.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
@@ -25,7 +25,7 @@ class Agents:
         template="Translate the following English text to German: '{text}'"
     )
 
-    # Create LLMChains for each translation
+    ## Creating LLMChains for each translation
     french_chain = french_template | llm | StrOutputParser()
     german_chain = german_template | llm | StrOutputParser()
 
