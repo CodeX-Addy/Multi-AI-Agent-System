@@ -29,19 +29,16 @@ class Agents:
     french_chain = french_template | llm | StrOutputParser()
     german_chain = german_template | llm | StrOutputParser()
 
-
     def translate(self, text):
         french = self.french_chain.invoke(text)
         german = self.german_chain.invoke(text)
         return french, german
-
 
 def main():
         text = input("Enter English text to translate: ")
         french, german = Agents().translate(text)
         print(f"French translation: {french}")
         print(f"German translation: {german}")
-
 
 if __name__ == "__main__":
     main()
