@@ -1,6 +1,6 @@
-# Multi-Agent Translation System 
+# Multi-Lingual AI System 
 
-This project demonstrates a simple multi-agent translation system using langchain. The system translates English text to French and German.
+This project demonstrates a simple multi-lingual translation system using langchain. The system translates English text to French and German.
 
 ## Overview
 
